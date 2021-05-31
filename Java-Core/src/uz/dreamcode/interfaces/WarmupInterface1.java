@@ -22,4 +22,24 @@ public interface WarmupInterface1 {
     String missingChar(String str, int n);
 
     String frontBack(String str);
+
+    String front3(String str);
+
+    String backAround(String str);
+
+    boolean or35(int n);
+
+    String front22(String str);
+
+    boolean startHi(String str);
+
+    boolean icyHot(int temp1, int temp2);
+
+    boolean in1020(int a, int b);
+
+    boolean hasTeen(int a, int b, int c);
+
+    String delDel(String str);
+
+    boolean mixStart(String str);
 }

@@ -56,6 +56,56 @@ public class Warmup_1 implements WarmupInterface1 {
 
     @Override
     public String frontBack(String str) {
-        return str.length()>1? str.charAt(str.length()-1)+str.substring(1, str.length()-1)+str.charAt(0):str;
+        return str.length() > 1 ? str.charAt(str.length() - 1) + str.substring(1, str.length() - 1) + str.charAt(0) : str;
+    }
+
+    @Override
+    public String front3(String str) {
+        return ((str.length() < 3) ? (str.concat(str).concat(str)) : str.substring(0, 3) + str.substring(0, 3) + str.substring(0, 3));
+    }
+
+    @Override
+    public String backAround(String str) {
+        return str.length() > 1 ? str.charAt(str.length() - 1) + str + str.charAt(str.length() - 1) : str + str + str;
+    }
+
+    @Override
+    public boolean or35(int n) {
+        return n % 3 == 0 || n % 5 == 0;
+    }
+
+    @Override
+    public String front22(String str) {
+        return (str.length() == 2 || str.length() == 1) ? (str + str + str) : str.length() > 2 ? str.substring(0, 2) + str + str.substring(0, 2) : str;
+    }
+
+    @Override
+    public boolean startHi(String str) {
+        return str.startsWith("hi");
+    }
+
+    @Override
+    public boolean icyHot(int temp1, int temp2) {
+        return (temp1 < 0 && temp2 > 100) || (temp1 > 100 && temp2 < 0);
+    }
+
+    @Override
+    public boolean in1020(int a, int b) {
+        return ((a >= 10 && a <= 20) || (b >= 10 && b <= 20));
+    }
+
+    @Override
+    public boolean hasTeen(int a, int b, int c) {
+        return (a >= 13 && a <= 19) || (b >= 13 && b <= 19) || (c >= 13 && c <= 19);
+    }
+
+    @Override
+    public String delDel(String str) {
+        return str.length() >= 4 && str.indexOf("del", 1) == 1 ? str.charAt(0) + str.substring(str.indexOf("del", 1) + 3) : str;
+    }
+
+    @Override
+    public boolean mixStart(String str) {
+        return (str.trim().indexOf("ix") >= 1);
     }
 }
