@@ -42,4 +42,22 @@ public interface WarmupInterface1 {
     String delDel(String str);
 
     boolean mixStart(String str);
+
+    String startOz(String str);
+
+    int intMax(int a, int b, int c);
+
+    int close10(int a, int b);
+
+    boolean in3050(int a, int b);
+
+    int max1020(int a, int b);
+
+    boolean stringE(String str);
+
+    boolean lastDigit(int a, int b);
+
+    String endUp(String str);
+
+    String everyNth(String str, int n);
 }

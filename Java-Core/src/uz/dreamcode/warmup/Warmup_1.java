@@ -108,4 +108,72 @@ public class Warmup_1 implements WarmupInterface1 {
     public boolean mixStart(String str) {
         return (str.trim().indexOf("ix") >= 1);
     }
+
+    @Override
+    public String startOz(String str) {
+        String result = "";
+        if (str.length() >= 1 && str.toLowerCase().charAt(0) == 'o') {
+            result = result.concat(String.valueOf(str.charAt(0)));
+        }
+        if (str.length() > 1 && str.toLowerCase().charAt(1) == 'z') {
+            result = result.concat(String.valueOf(str.charAt(1)));
+        }
+        return result;
+    }
+
+    @Override
+    public int intMax(int a, int b, int c) {
+        return ((a > b) ? Math.max(a, c) : Math.max(b, c));
+    }
+
+    @Override
+    public int close10(int a, int b) {
+        return Math.abs(a - 10) == Math.abs(b - 10) ? 0 : Math.abs(a - 10) > Math.abs(b - 10) ? b : a;
+    }
+
+    @Override
+    public boolean in3050(int a, int b) {
+        return ((a >= 30 && a <= 40 && b >= 30 && b <= 40) || (a >= 40 && a <= 50 && b >= 40 && b <= 50));
+    }
+
+    @Override
+    public int max1020(int a, int b) {
+        if(a >= 10 && a <= 20 && b >= 10 && b <= 20) {
+            return Math.max(a, b);
+        }else if(b >= 10 && b <= 20) {
+            return b;
+        } else if(a >= 10 && a <= 20) {
+            return a;
+        } else{
+            return 0;
+        }
+    }
+
+    @Override
+    public boolean stringE(String str) {
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'e') count++;
+        }
+        return (count >= 1 && count <= 3);
+    }
+
+    @Override
+    public boolean lastDigit(int a, int b) {
+        return (a % 10 == b % 10);
+    }
+
+    @Override
+    public String endUp(String str) {
+        return (str.length() > 3) ? (str.substring(0, (str.length() - 3)) + str.substring(str.length() - 3).toUpperCase()) : str.toUpperCase();
+    }
+
+    @Override
+    public String everyNth(String str, int n) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < str.length(); i += n) {
+            result.append(str.charAt(i));
+        }
+        return result.toString();
+    }
 }
