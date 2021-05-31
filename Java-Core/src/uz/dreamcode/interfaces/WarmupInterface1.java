@@ -1,5 +1,9 @@
 package uz.dreamcode.interfaces;
 
+/************************
+*****Uzbek Programmer****
+*************************/
+
 public interface WarmupInterface1 {
     boolean sleepIn(boolean weekday, boolean vacation);
 
