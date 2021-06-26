@@ -138,13 +138,13 @@ public class Warmup_1 implements WarmupInterface1 {
 
     @Override
     public int max1020(int a, int b) {
-        if(a >= 10 && a <= 20 && b >= 10 && b <= 20) {
+        if (a >= 10 && a <= 20 && b >= 10 && b <= 20) {
             return Math.max(a, b);
-        }else if(b >= 10 && b <= 20) {
+        } else if (b >= 10 && b <= 20) {
             return b;
-        } else if(a >= 10 && a <= 20) {
+        } else if (a >= 10 && a <= 20) {
             return a;
-        } else{
+        } else {
             return 0;
         }
     }

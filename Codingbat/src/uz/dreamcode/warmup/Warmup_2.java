@@ -100,7 +100,7 @@ public class Warmup_2 implements WarmupInterface_2 {
         int count = 0;
 
         for (int i = 0; i < Math.min(a.length(), b.length()) - 1; i++) {
-            if (a.substring (i, i + 2).equals (b.substring (i, i + 2))) {
+            if (a.substring(i, i + 2).equals(b.substring(i, i + 2))) {
                 count++;
             }
         }
@@ -111,13 +111,13 @@ public class Warmup_2 implements WarmupInterface_2 {
     public String stringX(String str) {
         char[] chars = str.toCharArray();
 
-        if(str.length() > 1)  {
+        if (str.length() > 1) {
             StringBuilder strBuilder = new StringBuilder();
-            for(int i = 1; i < chars.length-1; i++) {
+            for (int i = 1; i < chars.length - 1; i++) {
                 strBuilder.append((chars[i] == 'x' || chars[i] == 'X') ? "" : chars[i]);
             }
             str = strBuilder.toString();
-            return chars[0] + str+chars[chars.length-1];
+            return chars[0] + str + chars[chars.length - 1];
         }
         return str;
     }
@@ -125,12 +125,12 @@ public class Warmup_2 implements WarmupInterface_2 {
     @Override
     public String altPairs(String str) {
         String string = "";
-        for (int i = 0; i < str.length (); i += 4){
-            if (str.length () > 1) {
-                if (i + 2 < str.length ()) {
-                    string += str.substring (i, i + 2);
+        for (int i = 0; i < str.length(); i += 4) {
+            if (str.length() > 1) {
+                if (i + 2 < str.length()) {
+                    string += str.substring(i, i + 2);
                 } else {
-                    string += str.substring (i);
+                    string += str.substring(i);
                 }
             } else {
                 return str;
@@ -151,8 +151,8 @@ public class Warmup_2 implements WarmupInterface_2 {
 
     @Override
     public boolean noTriples(int[] nums) {
-        for (int i=0; i < (nums.length-2); i++) {
-            if (nums[i+1]==nums[i] && nums[i+2]==nums[i]) return false;
+        for (int i = 0; i < (nums.length - 2); i++) {
+            if (nums[i + 1] == nums[i] && nums[i + 2] == nums[i]) return false;
         }
         return true;
     }
